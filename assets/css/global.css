@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+:root {
+    --primary-color: #143c3c;
+    --secondary-color: #e2eddf;
+    --green-color: #83a17d;
+    --green-medium-color: #143c3c;
+    --light-green-color: #9ab295;
+    --lighter-green-color: #6a8383;
+    --black-color: #152427;
+    --text-color: #7d8188;
+    --light-black-color: #575d5e;
+    --lighter-black-color: #152427;
+    --gray-color: #7d8188;
+    --light-gray-color: #c4c4c4;
+    --lighter-gray-color: #eaeaea;
+    --brown-color: #a75325;
+    --gray-medium-color: #575d5e;
+    --secondary-font: "Public Sans", sans-serif;
+}
+
+.tacenter {
+    text-align: center;
+}
+
+.mrcenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn {
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: transparent;
+    padding: 0 19px;
+    border: none;
+    outline: none;
+    border-radius: 999px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn--outline {
+    color: var(--gray-color);
+    min-width: 44px;
+    line-height: 48px;
+}
+
+.btn--primary {
+    min-width: 173px;
+    line-height: 57px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.btn--secondary {
+    min-width: 104px;
+    line-height: 44px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 22px;
+}
+
+.section-heading {
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+}
+
+.section-heading.lv1 {
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+.section-heading.lv2 {
+    font-weight: 600;
+    font-size: 4.2rem;
+    line-height: 1.24;
+}
+
+.lv2 {
+    position: relative;
+}
+
+.lv2::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--black-color);
+    top: 80%;
+    transform: translateY(-50%);
+    right: 110px;
+}
+
+.section-heading.lv3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.section-heading.lv4 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.62;
+}
+
+.lv4 {
+    --left: 45px;
+    position: relative;
+    margin-left: var(--left);
+}
+
+.lv4::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 25px;
+    height: 1px;
+    background: var(--black-color);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(var(--left) * -1);
+}
+
+.section-heading.lv5 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: white;
+}
+
+.section-desc {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: var(--text-color);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-3 {
+    --line-clamp: 3;
+}
+
+.line-clamp.line-4 {
+    --line-clamp: 4;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    margin: 50px 76px 0 0;
+}
+
+.control__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: var(--black-color);
+    transition: 0.25s;
+}
+
+.control__btn:hover {
+    background: var(--green-medium-color);
+    cursor: pointer;
+    color: white;
+}
+
+.control__btn:last-child {
+    rotate: 180deg;
+}
